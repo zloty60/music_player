@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+    url(./assets/fonts/Gilroy-ExtraBold.otf) format("opentype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"), url(./assets/fonts/Gilroy-Light.otf) format("opentype");
+}
+
+.slick-active img {
+  transition: transform 0.3s;
+  transform: scale(1);
+}
+
+/*  style do animacji  */
+.viewMore-enter {
+  opacity: 0;
+  transform: scale(0.9);
+  transform: translateX(100%);
+}
+.viewMore-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.viewMore-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.viewMore-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+  transform: translateX(100%);
+}
+
+.playlist-enter {
+  opacity: 0;
+  transform: scale(0.9);
+  transform: translateY(100%);
+}
+.playlist-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.playlist-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.playlist-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+  transform: translateY(100%);
 }
